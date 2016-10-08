@@ -11,4 +11,4 @@ exports.connect = function() {
     database: 'chat'
   });
   return connection;
-}
+};

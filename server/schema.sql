@@ -1,4 +1,4 @@
--- DROP database chat;
+DROP database IF EXISTS chat;
 CREATE DATABASE chat;
 
 USE chat;
@@ -24,7 +24,7 @@ USE chat;
     
  CREATE TABLE `Rooms` (
    `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-   `roomname` VARCHAR(20) NOT NULL DEFAULT 'NULL',
+   `roomname` VARCHAR(20) NULL DEFAULT NULL,
    PRIMARY KEY (`id`)
  );
 
@@ -50,7 +50,7 @@ USE chat;
     
  CREATE TABLE `Messages` (
    `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-   `text` VARCHAR(140) NOT NULL DEFAULT NULL,
+   `text` VARCHAR(140) NULL DEFAULT NULL,
    `id_Users` INTEGER NULL DEFAULT NULL,
    `id_Rooms` INTEGER NULL DEFAULT NULL,
    PRIMARY KEY (`id`)
